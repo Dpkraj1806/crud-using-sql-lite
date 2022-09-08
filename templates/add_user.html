@@ -1,0 +1,27 @@
+{% extends "base.html"%}
+
+
+{%block title %}
+<h1>ADD USER</h1>
+{%endblock title%}
+
+
+{%block content%}
+
+<div class="row">
+    <div class="col">
+        <h2>Add Student</h2>
+        <form action="" method="POST">
+            <div>
+                <input type="text"name="name" id="name" placeholder="Enter Name"  required="1"><br>
+                <input type="text"name="age" id="age" placeholder="Enter Age" required="1"><br>
+                <input type="text"name="location" id="location" placeholder="Enter Location" required="1"><br>
+                <input type="text"name="language" id="language" placeholder="Enter Language" required="1"><br>
+
+                <input type="submit"  value="submit">
+            </div>
+        </form>
+    </div>
+</div>
+
+{%endblock content%}

@@ -1,0 +1,35 @@
+{%extends "base.html" %}
+
+
+{%block title %}
+<h1>CRUD using SQL Lite</h1>
+<div style="justify-content: right; text-align:right">
+    <a href="{{url_for('adduser')}}">Add Student</a>
+</div>
+{%endblock title%}
+
+{%block content%}
+<table>
+    <tr>
+        <th>Roll No</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Location</th>
+        <th>Language</th>
+    </tr>
+    {% for row in datas %}
+
+    <tr>
+        <td>{{loop.index}}</td>
+        <td>{{row.NAME}}</td>
+        <td>{{row.AGE}}</td>
+        <td>{{row.LOCATION}}</td>
+        <td>{{row.LANGUAGE}}</td>
+        <th><a href="{{url_for('edituser',id=row.ID)}}">Edit</a></th>
+        <th><a href="{{url_for('deleteuser',id=row.ID)}}">Delete</a></th>
+    </tr>
+
+    {%endfor %}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+</table>
+{%endblock content%}
